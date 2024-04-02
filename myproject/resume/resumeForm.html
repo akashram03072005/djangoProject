@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resumeForm.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Resume Form</h2>
+        <form action="#" method="post" onsubmit="return validateForm()">
+          <div id="photo">
+            <label for="profile-photo">Profile Photo:</label>
+            <input type="file" id="profile-photo" name="profile-photo">
+            <img id="preview-photo" src="#" alt="Your Profile Photo" style="display: none; max-width: 200px; margin-top: 10px;">
+          </div>
+    
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required>
+    
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone" required>
+    
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required>
+    
+          <label for="summary">Summary:</label>
+          <textarea id="summary" name="summary" required></textarea>
+    
+          <label for="experience">Experience:</label>
+          <textarea id="experience" name="experience" required></textarea>
+    
+          <label for="education">Education:</label>
+          <textarea id="education" name="education" required></textarea>
+    
+          <label for="skills">Skills:</label>
+          <textarea id="skills" name="skills" required></textarea>
+    
+          <label for="projects">Projects:</label>
+          <textarea id="projects" name="projects"></textarea>
+    
+          <label for="certifications">Certifications:</label>
+          <textarea id="certifications" name="certifications"></textarea>
+    
+          <label for="languages">Languages:</label>
+          <textarea id="languages" name="languages"></textarea>
+    
+          <input type="submit" value="Submit">
+          <div class="watermark">AKM Watermark</div>
+        </form>
+      </div>
+    
+      <script>
+        function validateForm() {
+          var fullname = document.getElementById('fullname').value;
+          var email = document.getElementById('email').value;
+          var phone = document.getElementById('phone').value;
+          var address = document.getElementById('address').value;
+          var summary = document.getElementById('summary').value;
+          var experience = document.getElementById('experience').value;
+          var education = document.getElementById('education').value;
+          var skills = document.getElementById('skills').value;
+    
+          if (fullname == '' || email == '' || phone == '' || address == '' || summary == '' || experience == '' || education == '' || skills == '') {
+            alert('Please fill out all required fields.');
+            return false;
+          }
+    
+          return true;
+        }
+    
+        // Function to display uploaded image
+        document.getElementById('profile-photo').onchange = function (evt) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById('preview-photo').style.display = 'block';
+            document.getElementById('preview-photo').src = e.target.result;
+          };
+          reader.readAsDataURL(this.files[0]);
+        };
+      </script>
+    
+    
+</body>
+</html>

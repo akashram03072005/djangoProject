@@ -1,0 +1,78 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #5b6dff; /* Blue background */
+}
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #845ec2; /* Purple container background */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+  position: relative;
+}
+.container:hover {
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow on hover */
+}
+h2 {
+  margin-top: 0;
+  color: #fff; /* White header text */
+  text-transform: uppercase; /* Uppercase header text */
+  font-size: 24px; /* Larger font size */
+  letter-spacing: 2px; /* Increased letter spacing */
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff; /* White label text */
+  font-size: 14px; /* Smaller font size */
+  font-weight: bold; /* Bold text */
+}
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px; /* Increased spacing between input fields */
+  border: 1px solid #fff; /* White border */
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+  background-color: transparent; /* Transparent background */
+  color: #fff; /* White text color */
+}
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  border-color: #fff; /* White border color on focus */
+}
+textarea {
+  height: 120px; /* Increased height */
+}
+input[type="submit"] {
+  padding: 12px 24px;
+  background-color: #fff; /* White button background */
+  color: #5b6dff; /* Blue button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for button background color */
+}
+input[type="submit"]:hover {
+  background-color: #f7d647; /* Yellow on hover */
+}
+#photo {
+  margin-bottom: 20px;
+}
+#preview-photo {
+  display: block;
+  margin: 0 auto 15px; /* Centered and with a little spacing */
+  border-radius: 50%; /* Rounded image */
+  max-width: 150px; /* Limiting image size */
+}
+.watermark {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5); /* Semi-transparent white text */
+}
